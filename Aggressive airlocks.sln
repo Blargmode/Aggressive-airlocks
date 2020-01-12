@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aggressive airlocks", "Aggressive airlocks\Aggressive airlocks.csproj", "{1B724014-EE53-459F-A485-DE158C29A945}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Clipboard|Any CPU = Clipboard|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B724014-EE53-459F-A485-DE158C29A945}.Clipboard|Any CPU.ActiveCfg = Clipboard|Any CPU
+		{1B724014-EE53-459F-A485-DE158C29A945}.Clipboard|Any CPU.Build.0 = Clipboard|Any CPU
+		{1B724014-EE53-459F-A485-DE158C29A945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B724014-EE53-459F-A485-DE158C29A945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B724014-EE53-459F-A485-DE158C29A945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B724014-EE53-459F-A485-DE158C29A945}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8440AEA-AB51-4247-9292-E60967048C29}
+	EndGlobalSection
+EndGlobal
