@@ -48,7 +48,7 @@ namespace IngameScript
 		//altitude when disabling the airlokc feature, then if altitude rises above that value, enable airlocks again.
 		
 		//Idea:
-		//Since everything is fucking broken:
+		//Since everything is broken:
 		//Sensor vent doesn't work, so: 
 		//Manualy send command "atmo": this will set the system in atmo mode.
 		//Manually send it again to turn atmo mode off.
@@ -154,7 +154,7 @@ namespace IngameScript
 			debugLCD = GridTerminalSystem.GetBlockWithName("ALDEBUG") as IMyTextPanel;
 			if(debugLCD != null)
 			{
-				debugLCD.ShowPublicTextOnScreen();
+				debugLCD.ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
 			}
 			
 
@@ -743,7 +743,7 @@ namespace IngameScript
 				if(General.HasTag(airlockTag, allLCDs[i].CustomName))
 				{
 					StatusLCDs.Add(allLCDs[i]);
-					allLCDs[i].ShowPublicTextOnScreen();
+					allLCDs[i].ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
 				}
 			}
 
@@ -1073,7 +1073,7 @@ namespace IngameScript
 			
 			if (debugLCD != null)
 			{
-				debugLCD.WritePublicText(finalDetailedInfoText);
+				debugLCD.WriteText(finalDetailedInfoText);
 			}
 			
 		}
@@ -1105,7 +1105,7 @@ namespace IngameScript
 
 			for (int i = 0; i < StatusLCDs.Count; i++)
 			{
-				StatusLCDs[i].WritePublicText(final);
+				StatusLCDs[i].WriteText(final);
 			}
 		}
 

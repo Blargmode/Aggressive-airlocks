@@ -127,8 +127,8 @@ namespace IngameScript
 					}
 					text += " " + ventState + " ";
 				}
-				panels[i].ShowPublicTextOnScreen();
-				panels[i].WritePublicText(text);
+				panels[i].ContentType = VRage.Game.GUI.TextPanel.ContentType.TEXT_AND_IMAGE;
+				panels[i].WriteText(text);
 			}
 		}
 	}
