@@ -49,7 +49,9 @@ namespace IngameScript
 			this.timeOpenExiting = timeOpenExiting;
 			lastStatus = door.Status;
 
-			if (door is IMyAirtightHangarDoor)
+			door.CustomData = door.BlockDefinition.SubtypeId;
+
+			if (door is IMyAirtightHangarDoor || door.BlockDefinition.SubtypeId.EndsWith("Gate"))
 			{
 				isHangarDoor = true;
 			}

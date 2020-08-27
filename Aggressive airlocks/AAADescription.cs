@@ -22,7 +22,7 @@ namespace IngameScript
 	/*
 Blargmode's Aggressive Airlocks
 
-Version: 6.3 (2020-08-27)
+Version: 6.4 (2020-08-27)
 
 Probably the best airlock script on the workshop ;)
 
