@@ -603,24 +603,21 @@ namespace IngameScript
 
 				for (int j = 0; j < allDoors.Count; j++)
 				{
-					//If doors adjacent (touching)
-					if (Vector3I.DistanceManhattan(allDoors[i].Position, allDoors[j].Position) == 1)
+					//if door [j] is directly in front or behind door [i]
+					if (allDoors[i].Position + Base6Directions.GetIntVector(allDoors[i].Orientation.Forward) == allDoors[j].Position || allDoors[i].Position - Base6Directions.GetIntVector(allDoors[i].Orientation.Forward) == allDoors[j].Position)
 					{
-						//if doors on same Y level
-						if (allDoors[i].Position.Y == allDoors[j].Position.Y)
+						// If doors are facing same or opposite directions
+						if (allDoors[i].Orientation.Forward == allDoors[j].Orientation.Forward || allDoors[i].Orientation.Forward == Base6Directions.GetFlippedDirection(allDoors[j].Orientation.Forward))
 						{
-							if (allDoors[i].Orientation.Left == Base6Directions.GetFlippedDirection(allDoors[j].Orientation.Left))
-							{
-								TinyAirlocks.Add(new TinyAirlock(this, ExtendDoor(allDoors[i]), ExtendDoor(allDoors[j])));
-								tinyAirlockCount++;
-								text.AppendLine("\n> Tiny airlock " + TinyAirlocks.Count + " added");
+							TinyAirlocks.Add(new TinyAirlock(this, ExtendDoor(allDoors[i]), ExtendDoor(allDoors[j])));
+							tinyAirlockCount++;
+							text.AppendLine("\n> Tiny airlock " + TinyAirlocks.Count + " added");
 
-								//Doors found, remove from this list to prevent them ending up as part of another airlock.
-								allDoors.RemoveAtFast(j);
-								allDoors.RemoveAtFast(i);
-								i--;
-								break;
-							}
+							//Doors found, remove from this list to prevent them ending up as part of another airlock.
+							allDoors.RemoveAtFast(j);
+							allDoors.RemoveAtFast(i);
+							i--;
+							break;
 						}
 					}
 				}

@@ -22,7 +22,7 @@ namespace IngameScript
 	/*
 Blargmode's Aggressive Airlocks
 
-Version: 6.2 (2020-01-21)
+Version: 6.3 (2020-08-27)
 
 Probably the best airlock script on the workshop ;)
 
@@ -51,7 +51,7 @@ Just send the update command to the script. It will find all new doors.
 
 
 ___/ Setup - Tiny airlocks \\_________
-Place two doors back to back and send the update command.
+Place two doors touching in a line and send the update command.
 
 
 ___/ Setup - Smart airlocks \\_________
